@@ -3,18 +3,16 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>dev.ikm.reasoner-test-data</groupId>
-		<artifactId>reasoner-test-data-parent</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
+		<groupId>dev.ikm.snomed</groupId>
+		<artifactId>snomed-test-data</artifactId>
+		<version>0.1.0</version>
 	</parent>
 
-	<artifactId>reasoner-test-data-solor</artifactId>
-	<version>2023.1.0</version>
+	<artifactId>snomed-test-data-us-20230901</artifactId>
 	<packaging>pom</packaging>
 
 	<properties>
-		<data.dir>${user.home}/SolorTest</data.dir>
-		<data>solor-08-27-256-sa</data>
+		<snomed.edition>SnomedCT_ManagedServiceUS_PRODUCTION_US1000124_20230901T120000Z</snomed.edition>
 	</properties>
 
 	<build>

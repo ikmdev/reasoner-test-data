@@ -2,13 +2,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<parent>
-		<groupId>dev.ikm.build</groupId>
-		<artifactId>java-parent</artifactId>
-		<version>1.42.0</version>
-		<relativePath />
-	</parent>
-
 	<groupId>dev.ikm.reasoner-test-data</groupId>
 	<artifactId>reasoner-test-data-parent</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
@@ -20,15 +13,12 @@
 	<!-- To build test data artifacts: -->
 	<!-- 	mvn clean install -DskipTestDataBuild=false -->
 	<modules>
-		<module>reasoner-test-data-sample</module>
-		<module>reasoner-test-data-solor</module>
-		<module>reasoner-test-data-snomed-us-20200901</module>
-		<module>reasoner-test-data-snomed-us-20230901</module>
+		<module>snomed-test-data</module>
+		<module>tinkar-reasoner-test-data</module>
 	</modules>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven-assembly-plugin.version>3.7.1</maven-assembly-plugin.version>
 		<skipTestDataBuild>true</skipTestDataBuild>
 	</properties>
 
@@ -38,7 +28,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-assembly-plugin</artifactId>
-					<version>${maven-assembly-plugin.version}</version>
+					<version>3.7.1</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -51,42 +41,6 @@
 					<groupId>org.codehaus.mojo</groupId>
 					<artifactId>tidy-maven-plugin</artifactId>
 					<version>1.2.0</version>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-assembly-plugin</artifactId>
-					<version>${maven-assembly-plugin.version}</version>
-					<executions>
-						<execution>
-							<id>reasoner-test-data-assemble</id>
-							<phase>package</phase>
-							<goals>
-								<goal>single</goal>
-							</goals>
-							<configuration>
-								<appendAssemblyId>false</appendAssemblyId>
-								<includeProjectBuildFilters>false</includeProjectBuildFilters>
-								<inlineDescriptors>
-									<inlineDescriptor>
-										<id>reasoner-data</id>
-										<formats>
-											<format>zip</format>
-										</formats>
-										<baseDirectory>/</baseDirectory>
-										<fileSets>
-											<fileSet>
-												<directory>
-													${data.dir}/${data}</directory>
-												<outputDirectory>${data}</outputDirectory>
-												<filtered>false</filtered>
-											</fileSet>
-										</fileSets>
-									</inlineDescriptor>
-								</inlineDescriptors>
-								<skipAssembly>${skipTestDataBuild}</skipAssembly>
-							</configuration>
-						</execution>
-					</executions>
 				</plugin>
 			</plugins>
 		</pluginManagement>
