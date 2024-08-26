@@ -1,10 +1,8 @@
-# reasoner-test-data
-
-
+# Tinkar Reasoner Test Data
 
 ## Reasoner test data artifacts
 
-Packages test dbs for testing reasoner service implementations
+Packages test dbs for testing reasoner service implementations.
 
 Each db is packaged in a project where the root directory and db directory are specified as properties. There is a common assembly descriptor in the parent.
 
