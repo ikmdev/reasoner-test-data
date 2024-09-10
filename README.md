@@ -2,10 +2,30 @@
 
 Builds maven test data artifacts for SNOMED and other data sources that are not open source licensed.
 
+## Getting Started
+
+Required for running this:
+
+1. Download and install Open JDK Java 21
+
+
+## Building and Running
+
+Follow the steps below to build and run Komet on your local machine:
+
+1. Clone the repository from GitHub to your local machine
+
+2. Change local directory to cloned repo location
+
+3. Enter the following command to build the application:
+
 Building test data artifacts is skipped by default.
 
 To build test data artifacts:
-* mvn clean install -DskipTestDataBuild=false
+
+```bash
+./mvnw clean install -DskipTestDataBuild=false
+```
 
 ### SNOMED Test Data
 
@@ -22,6 +42,12 @@ These artifacts are used for integration testing in the [IKM Elk Reasoner projec
 ### Tinkar Test Data
 
 The tinkar-reasoner-test-data module packages test dbs for testing tinkar reasoner service implementations.
+
+## Issues and Contributions
+
+Technical and non-technical issues can be reported to the GitHub Issue Tracker.
+
+Contributions can be submitted via pull requests. Please check the [contribution guide](doc/how-to-contribute.md) for more details.
 
 ### Team Ownership - Product Owner
 
