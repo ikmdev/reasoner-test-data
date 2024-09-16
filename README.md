@@ -42,11 +42,11 @@ These artifacts are used for integration testing in the [IKM Elk Reasoner projec
 
 The tinkar-reasoner-test-data module packages test dbs for testing tinkar reasoner service implementations.
 
+### Team Ownership - Product Owner
+
+Data Team - Eric Mays (External) <emays@mays-systems.com>
+
 ## Issues and Contributions
 Technical and non-technical issues can be reported to the [Issue Tracker](https://github.com/ikmdev/reasoner-test-data/issues).
 
 Contributions can be submitted via pull requests. Please check the [contribution guide](doc/how-to-contribute.md) for more details.
-
-### Team Ownership - Product Owner
-
-Data Team - Eric Mays (External) <emays@mays-systems.com>
