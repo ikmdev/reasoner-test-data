@@ -9,12 +9,13 @@
 	</parent>
 
 	<artifactId>reasoner-test-data-snomed-us-20230901</artifactId>
-	<version>2024.05.02</version>
+	<version>2024.08.30</version>
 	<packaging>pom</packaging>
 
 	<properties>
 		<data.dir>${user.home}/SolorTest</data.dir>
-		<data>SnomedCT_US_20230901_SpinedArray-20240502</data>
+		<!-- Note: from snomedct-us-20230901-spinedarray-data-1.0.1 -->
+		<data>SnomedCT_US_20230901_SpinedArray-20240830</data>
 	</properties>
 
 	<build>
