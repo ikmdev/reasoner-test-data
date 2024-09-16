@@ -2,28 +2,27 @@
 
 Builds maven test data artifacts for SNOMED and other data sources that are not open source licensed.
 
-## Getting Started
-
-Required for running this:
-
-1. Download and install Open JDK Java 21
-
-
 ## Building and Running
 
-Follow the steps below to build and run Komet on your local machine:
+Requires Java 21. Clone the repo, change to the cloned repo location.
 
-1. Clone the repository from GitHub to your local machine
+Unix/Linux/OSX:
 
-2. Change local directory to cloned repo location
+```
+./mvnw clean install
+```
 
-3. Enter the following command to build the application:
+Windows:
+
+```
+./mvnw.cmd clean install
+```
 
 Building test data artifacts is skipped by default.
 
 To build test data artifacts:
 
-```bash
+```
 ./mvnw clean install -DskipTestDataBuild=false
 ```
 
