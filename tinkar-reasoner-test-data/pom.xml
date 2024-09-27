@@ -19,8 +19,10 @@
 	<modules>
 		<module>reasoner-test-data-sample</module>
 		<module>reasoner-test-data-solor</module>
+		<module>reasoner-test-data-connectathon-202409</module>
 		<module>reasoner-test-data-snomed-us-20200901</module>
 		<module>reasoner-test-data-snomed-us-20230901</module>
+<!--		<module>reasoner-test-data-snomed-us-20240901</module>-->
 	</modules>
 
 	<properties>

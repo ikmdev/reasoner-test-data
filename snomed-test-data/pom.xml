@@ -21,10 +21,12 @@
 		<module>snomed-test-data-intl-20200731</module>
 		<module>snomed-test-data-intl-20210131</module>
 		<module>snomed-test-data-intl-20230630</module>
+		<module>snomed-test-data-intl-20240201</module>
 		<module>snomed-test-data-us-20210301</module>
 		<module>snomed-test-data-us-20230301</module>
 		<module>snomed-test-data-us-20230901</module>
 		<module>snomed-test-data-us-20240301</module>
+		<module>snomed-test-data-us-20240901</module>
 	</modules>
 
 	<properties>
