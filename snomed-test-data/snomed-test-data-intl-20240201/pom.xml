@@ -3,18 +3,16 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>dev.ikm.reasoner-test-data</groupId>
-		<artifactId>tinkar-reasoner-test-data-parent</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
+		<groupId>dev.ikm.snomed</groupId>
+		<artifactId>snomed-test-data</artifactId>
+		<version>0.1.0</version>
 	</parent>
 
-	<artifactId>reasoner-test-data-snomed-us-20200901</artifactId>
-	<version>2024.05.02</version>
+	<artifactId>snomed-test-data-intl-20240201</artifactId>
 	<packaging>pom</packaging>
 
 	<properties>
-		<data.dir>${user.home}/SolorTest</data.dir>
-		<data>SnomedCT_US_20200901_SpinedArray-20240502</data>
+		<snomed.edition>SnomedCT_InternationalRF2_PRODUCTION_20240201T120000Z</snomed.edition>
 	</properties>
 
 	<build>

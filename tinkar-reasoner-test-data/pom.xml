@@ -8,19 +8,19 @@
 	<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>tinkar-reasoner-test-data-parent</artifactId>
+	<artifactId>tinkar-test-data</artifactId>
 	<packaging>pom</packaging>
 
-	<name>Tinkar Reasoner Test Data Artifacts</name>
+	<name>Tinkar Test Data Artifacts</name>
 
 	<!-- Building test data artifacts is skipped by default -->
 	<!-- To build test data artifacts: -->
 	<!-- 	mvn clean install -DskipTestDataBuild=false -->
 	<modules>
-		<module>reasoner-test-data-sample</module>
-		<module>reasoner-test-data-solor</module>
-		<module>reasoner-test-data-snomed-us-20200901</module>
-		<module>reasoner-test-data-snomed-us-20230901</module>
+		<module>tinkar-test-data-sample</module>
+		<module>tinkar-test-data-snomed-us-20200901</module>
+		<module>tinkar-test-data-snomed-us-20230901</module>
+		<module>tinkar-test-data-snomed-us-20230901-nfh</module>
 	</modules>
 
 	<properties>
