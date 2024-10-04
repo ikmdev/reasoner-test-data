@@ -4,17 +4,17 @@
 
 	<parent>
 		<groupId>dev.ikm.reasoner-test-data</groupId>
-		<artifactId>tinkar-reasoner-test-data-parent</artifactId>
+		<artifactId>tinkar-test-data</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>reasoner-test-data-solor</artifactId>
-	<version>2023.1.0</version>
+	<artifactId>tinkar-test-data-snomed-us-20230901-nfh</artifactId>
+	<version>2024.09.20</version>
 	<packaging>pom</packaging>
 
 	<properties>
 		<data.dir>${user.home}/SolorTest</data.dir>
-		<data>solor-08-27-256-sa</data>
+		<data>SnomedCT_US_20230901_NFH_SpinedArray-20240920</data>
 	</properties>
 
 	<build>
