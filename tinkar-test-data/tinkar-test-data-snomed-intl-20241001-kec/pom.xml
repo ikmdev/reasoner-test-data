@@ -8,14 +8,13 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>tinkar-test-data-snomed-us-20230901</artifactId>
-	<version>2024.09.20</version>
+	<artifactId>tinkar-test-data-snomed-intl-20241001-kec</artifactId>
+	<version>2024.10.01</version>
 	<packaging>pom</packaging>
 
 	<properties>
 		<data.dir>${user.home}/SolorTest</data.dir>
-		<!-- Note: from snomedct-us-20240901-spinedarray-data-2024-09-20T18_08_00Z-spined array -->
-		<data>SnomedCT_US_20230901_SpinedArray-20240920</data>
+		<data>tinkar-snomedct-international-20241001-kec</data>
 	</properties>
 
 	<build>

@@ -18,6 +18,8 @@
 	<!-- 	mvn clean install -DskipTestDataBuild=false -->
 	<modules>
 		<module>tinkar-test-data-sample</module>
+		<module>tinkar-test-data-snomed-starter-data</module>
+		<module>tinkar-test-data-snomed-intl-20241001</module>
 		<module>tinkar-test-data-snomed-us-20200901</module>
 		<module>tinkar-test-data-snomed-us-20230901</module>
 		<module>tinkar-test-data-snomed-us-20230901-nfh</module>
