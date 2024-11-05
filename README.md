@@ -42,6 +42,23 @@ These artifacts are used for integration testing in the [IKM Elk Reasoner projec
 
 The tinkar-reasoner-test-data module packages test dbs for testing tinkar reasoner service implementations.
 
+### Tinkar Test Data Maven plugin
+
+To build the maven plugin used to build tinkar starter data and a tinkar db for SNOMED activate the testDataBuildMavenPlugin profile.
+
+```
+mvn clean install -PtestDataBuildMavenPlugin
+```
+
+### Tinkar Test Data SNOMED db
+
+To build the tinkar starter data and a tinkar db for SNOMED activate the testDataBuild profile.
+
+```
+mvn clean install -PtestDataBuild
+```
+
+
 ### Team Ownership - Product Owner
 
 Data Team - Eric Mays (External) <emays@mays-systems.com>
