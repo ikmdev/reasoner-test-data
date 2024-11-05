@@ -21,7 +21,8 @@
 	<!-- 	mvn clean install -DskipTestDataBuild=false -->
 	<modules>
 		<module>snomed-test-data</module>
-		<module>tinkar-reasoner-test-data</module>
+		<module>tinkar-test-data</module>
+		<module>tinkar-test-data-build</module>
 	</modules>
 
 	<properties>
@@ -62,4 +63,13 @@
 			</plugin>
 		</plugins>
 	</build>
+
+	<profiles>
+		<profile>
+			<id>testDataBuildMavenPlugin</id>
+			<modules>
+				<module>tinkar-test-data-build-maven-plugin</module>
+			</modules>
+		</profile>
+	</profiles>
 </project>
