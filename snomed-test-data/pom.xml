@@ -3,9 +3,9 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-	<groupId>dev.ikm.reasoner-test-data</groupId>
-	<artifactId>reasoner-test-data-parent</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+		<groupId>dev.ikm.reasoner-test-data</groupId>
+		<artifactId>reasoner-test-data-parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
 	<groupId>dev.ikm.snomed</groupId>
@@ -20,14 +20,18 @@
 		<module>snomed-test-data-intl-20200131</module>
 		<module>snomed-test-data-intl-20200731</module>
 		<module>snomed-test-data-intl-20210131</module>
+		<module>snomed-test-data-intl-20221231</module>
 		<module>snomed-test-data-intl-20230630</module>
-		<module>snomed-test-data-intl-20240201</module>
-		<module>snomed-test-data-intl-20241001</module>
+		<module>snomed-test-data-intl-20240101</module>
+		<module>snomed-test-data-intl-20240701</module>
 		<module>snomed-test-data-us-20210301</module>
 		<module>snomed-test-data-us-20230301</module>
 		<module>snomed-test-data-us-20230901</module>
 		<module>snomed-test-data-us-20240301</module>
 		<module>snomed-test-data-us-20240901</module>
+		<!-- remove these -->
+		<module>snomed-test-data-intl-20240201</module>
+		<module>snomed-test-data-intl-20241001</module>
 	</modules>
 
 	<properties>
