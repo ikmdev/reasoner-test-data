@@ -16,12 +16,18 @@
 
 	<name>Reasoner Test Data Artifacts</name>
 
-	<!-- Building test data artifacts is skipped by default -->
+	<!-- Building the SNOMED test data artifacts is skipped by default -->
 	<!-- To build test data artifacts: -->
 	<!-- 	mvn clean install -DskipTestDataBuild=false -->
+	<!-- To build the tinkar test dbs -->
+	<!-- First build the maven plugin -->
+	<!-- 	mvn clean install -P testDataBuildMavenPlugin -->
+	<!-- Then build the test dbs: -->
+	<!--	mvn clean install -P testDataBuild -->
 	<modules>
 		<module>snomed-test-data</module>
-		<module>tinkar-test-data</module>
+		<!-- Not currently using, but may do so later -->
+		<!-- <module>tinkar-test-data</module> -->
 		<module>tinkar-test-data-build</module>
 	</modules>
 
