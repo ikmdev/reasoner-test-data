@@ -14,7 +14,9 @@
 	<name>Tinkar Test Data Build</name>
 
 	<modules>
+		<module>tinkar-test-data-build-snomed-intl-20240701</module>
 		<module>tinkar-test-data-build-snomed-intl-20241001</module>
+		<module>tinkar-test-data-build-snomed-us-20240901</module>
 	</modules>
 
 	<properties>
