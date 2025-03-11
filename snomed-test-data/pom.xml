@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>dev.ikm.reasoner-test-data</groupId>
 		<artifactId>reasoner-test-data-parent</artifactId>
-		<version>0.0.1-AR-299_Java23-SNAPSHOT</version>
+		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
 	<groupId>dev.ikm.snomed</groupId>
