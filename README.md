@@ -4,7 +4,7 @@ Builds maven test data artifacts for SNOMED and other data sources that are not 
 
 ## Building and Running
 
-Requires Java 21. Clone the repo, change to the cloned repo location.
+Requires Java 23. Clone the repo, change to the cloned repo location.
 
 Unix/Linux/OSX:
 
