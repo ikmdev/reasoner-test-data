@@ -18,12 +18,12 @@ jobs:
     steps:
       - uses: actions/setup-java@v4
         with:
-          java-version: '21'
+          java-version: '23'
           distribution: 'zulu'
 
 
       - name: Deploy Artifacts To Nexus
-        uses: ikmdev/maven-nexus-deploy-action@v1.1.0
+        uses: ikmdev/maven-nexus-deploy-action@v2
         with:
           nexus_repo_password: ${{secrets.EC2_NEXUS_PASSWORD}}
           repo_name: ${{github.event.workflow_run.head_repository.full_name}}
