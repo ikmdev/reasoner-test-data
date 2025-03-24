@@ -9,7 +9,7 @@
 	</parent>
 
 	<artifactId>tinkar-test-data-build-snomed-us-20240901</artifactId>
-	<version>2024.12.16</version>
+	<version>2025.02.24</version>
 	<packaging>pom</packaging>
 
 	<properties>
