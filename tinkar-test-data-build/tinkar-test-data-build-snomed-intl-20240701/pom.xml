@@ -9,24 +9,13 @@
 	</parent>
 
 	<artifactId>tinkar-test-data-build-snomed-intl-20240701</artifactId>
-	<version>2024.11.23</version>
+	<version>2025.03.25</version>
 	<packaging>pom</packaging>
 
 	<properties>
-		<skipTestDataBuild>true</skipTestDataBuild>
+		<snomed.release>SnomedCT_InternationalRF2_PRODUCTION_20240701T120000Z</snomed.release>
+		<output.artifact>snomed-intl-20240701-sa</output.artifact>
 	</properties>
-
-	<build>
-		<pluginManagement>
-			<plugins>
-				<plugin>
-					<groupId>dev.ikm.reasoner-test-data</groupId>
-					<artifactId>tinkar-test-data-build-maven-plugin</artifactId>
-					<version>1.0-SNAPSHOT</version>
-				</plugin>
-			</plugins>
-		</pluginManagement>
-	</build>
 
 	<profiles>
 		<profile>
@@ -34,73 +23,24 @@
 			<build>
 				<plugins>
 					<plugin>
-						<groupId>dev.ikm.reasoner-test-data</groupId>
-						<artifactId>tinkar-test-data-build-maven-plugin</artifactId>
-						<executions>
-							<execution>
-								<id>starter-db</id>
-								<phase>compile</phase>
-								<goals>
-									<goal>tinkar-starter-data-build</goal>
-								</goals>
-								<configuration>
-									<dataStoreDir>
-										${project.build.directory}/db/snomed-sa</dataStoreDir>
-									<exportFile>
-										${project.build.directory}/tinkar-export.pb.zip
-									</exportFile>
-								</configuration>
-							</execution>
-							<execution>
-								<id>build-db</id>
-								<phase>compile</phase>
-								<goals>
-									<goal>snomed-build</goal>
-								</goals>
-								<configuration>
-									<dataStoreDir>
-										${project.build.directory}/db/snomed-sa</dataStoreDir>
-									<dataSourceDir>
-										${user.home}/data/snomed/SnomedCT_InternationalRF2_PRODUCTION_20240701T120000Z
-									</dataSourceDir>
-								</configuration>
-							</execution>
-						</executions>
+						<groupId>dev.ikm.tinkar</groupId>
+						<artifactId>tinkar-data-maven-plugin</artifactId>
+					</plugin>
+					<plugin>
+						<groupId>dev.ikm.maven</groupId>
+						<artifactId>snomed-ct-starterdata-maven-plugin</artifactId>
+					</plugin>
+					<plugin>
+						<groupId>dev.ikm.maven</groupId>
+						<artifactId>snomed-ct-transformation-maven-plugin</artifactId>
+					</plugin>
+					<plugin>
+						<groupId>dev.ikm.maven.tinkar</groupId>
+						<artifactId>tinkar-maven-plugin</artifactId>
 					</plugin>
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-assembly-plugin</artifactId>
-						<executions>
-							<execution>
-								<id>reasoner-test-data-assemble</id>
-								<phase>package</phase>
-								<goals>
-									<goal>single</goal>
-								</goals>
-								<configuration>
-									<appendAssemblyId>false</appendAssemblyId>
-									<includeProjectBuildFilters>false</includeProjectBuildFilters>
-									<inlineDescriptors>
-										<inlineDescriptor>
-											<id>reasoner-data</id>
-											<formats>
-												<format>zip</format>
-											</formats>
-											<baseDirectory>/</baseDirectory>
-											<fileSets>
-												<fileSet>
-													<directory>
-														${project.build.directory}/db/snomed-sa</directory>
-													<outputDirectory>snomed-intl-20240701-sa</outputDirectory>
-													<filtered>false</filtered>
-												</fileSet>
-											</fileSets>
-										</inlineDescriptor>
-									</inlineDescriptors>
-									<skipAssembly>false</skipAssembly>
-								</configuration>
-							</execution>
-						</executions>
 					</plugin>
 				</plugins>
 			</build>

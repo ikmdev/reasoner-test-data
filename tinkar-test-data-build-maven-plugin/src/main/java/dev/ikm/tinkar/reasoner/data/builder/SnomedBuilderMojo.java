@@ -9,6 +9,7 @@ import org.apache.maven.plugins.annotations.Mojo;
 import org.apache.maven.plugins.annotations.Parameter;
 
 import dev.ikm.snomedct.entitytransformer.SnomedTransformer;
+import dev.ikm.tinkar.common.service.CachingService;
 
 @Mojo(name = "snomed-build")
 public class SnomedBuilderMojo extends AbstractMojo {
@@ -28,6 +29,7 @@ public class SnomedBuilderMojo extends AbstractMojo {
 		getLog().info("Data source dir: " + dataSourceDir);
 		getLog().info("Data source full terminology: " + data_source_dir_full);
 		getLog().info("Controller name: " + controllerName);
+		CachingService.clearAll();
 		SnomedTransformer snomedTransformer = new SnomedTransformer();
 		snomedTransformer
 				.transformFile(Paths.get(dataStoreDir).toFile(), data_source_dir_full.toFile(),
