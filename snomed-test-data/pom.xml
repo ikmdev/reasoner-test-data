@@ -20,18 +20,17 @@
 		<module>snomed-test-data-intl-20200131</module>
 		<module>snomed-test-data-intl-20200731</module>
 		<module>snomed-test-data-intl-20210131</module>
+		<!-- These correspond to the us editions below -->
 		<module>snomed-test-data-intl-20221231</module>
 		<module>snomed-test-data-intl-20230630</module>
 		<module>snomed-test-data-intl-20240101</module>
 		<module>snomed-test-data-intl-20240701</module>
-		<module>snomed-test-data-us-20210301</module>
+		<module>snomed-test-data-intl-20250101</module>
 		<module>snomed-test-data-us-20230301</module>
 		<module>snomed-test-data-us-20230901</module>
 		<module>snomed-test-data-us-20240301</module>
 		<module>snomed-test-data-us-20240901</module>
-		<!-- remove these -->
-		<module>snomed-test-data-intl-20240201</module>
-		<module>snomed-test-data-intl-20241001</module>
+		<module>snomed-test-data-us-20250301</module>
 	</modules>
 
 	<properties>
