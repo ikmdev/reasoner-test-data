@@ -95,6 +95,7 @@
 						<inputDirectoryPath>
 							${snomed.directory}/${snomed.release}/Full/Terminology</inputDirectoryPath>
 						<dataOutputPath>${project.build.directory}</dataOutputPath>
+						<skipUnzip>true</skipUnzip>
 					</configuration>
 					<executions>
 						<execution>
