@@ -26,7 +26,7 @@
 		<origin.namespace>3094dbd1-60cf-44a6-92e3-0bb32ca4d3de</origin.namespace>
 		<snomed-ct-starterdata-maven-plugin.version>1.0.0-SNAPSHOT</snomed-ct-starterdata-maven-plugin.version>
 		<snomed-ct-transformation-maven-plugin.version>1.0.0-SNAPSHOT</snomed-ct-transformation-maven-plugin.version>
-		<tinkar-data-maven-plugin.version>1.8.0</tinkar-data-maven-plugin.version>
+		<tinkar-data-maven-plugin.version>1.9.0</tinkar-data-maven-plugin.version>
 		<tinkar-maven-plugin.version>1.18.0</tinkar-maven-plugin.version>
 	</properties>
 
