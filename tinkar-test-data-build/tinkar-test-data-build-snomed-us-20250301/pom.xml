@@ -8,14 +8,14 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>tinkar-test-data-build-snomed-us-20240901</artifactId>
+	<artifactId>tinkar-test-data-build-snomed-us-20250301</artifactId>
 	<version>2025.03.28</version>
 	<packaging>pom</packaging>
 
 	<properties>
 		<snomed.release>
-			SnomedCT_ManagedServiceUS_PRODUCTION_US1000124_20240901T120000Z</snomed.release>
-		<output.artifact>snomed-us-20240901-sa</output.artifact>
+			SnomedCT_ManagedServiceUS_PRODUCTION_US1000124_20250301T120000Z</snomed.release>
+		<output.artifact>snomed-us-20250301-sa</output.artifact>
 	</properties>
 
 	<profiles>
