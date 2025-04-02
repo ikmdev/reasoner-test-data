@@ -42,13 +42,9 @@ These artifacts are used for integration testing in the [IKM Elk Reasoner projec
 
 The tinkar-reasoner-test-data module packages test dbs for testing tinkar reasoner service implementations.
 
-### Tinkar Test Data Maven plugin
+### SNOMED CT Data Maven plugin
 
-To build the maven plugin used to build tinkar starter data and a tinkar db for SNOMED activate the testDataBuildMavenPlugin profile.
-
-```
-mvn clean install -PtestDataBuildMavenPlugin
-```
+Currently depends on the snapshot version of the plugins in [snomed-ct-data/plugin](https://github.com/ikmdev/snomed-ct-data)
 
 ### Tinkar Test Data SNOMED db
 
