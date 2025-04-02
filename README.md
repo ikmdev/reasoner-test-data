@@ -4,19 +4,11 @@ Builds maven test data artifacts for SNOMED and other data sources that are not 
 
 ## Building and Running
 
-Requires Java 23. Clone the repo, change to the cloned repo location.
+Requires Java 23.
 
-Unix/Linux/OSX:
+To build on Unix/Linux/OSX: `./mvnw clean install`
 
-```
-./mvnw clean install
-```
-
-Windows:
-
-```
-./mvnw.cmd clean install
-```
+On Windows: `./mvnw.cmd clean install`
 
 Building test data artifacts is skipped by default.
 
