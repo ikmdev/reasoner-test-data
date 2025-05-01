@@ -31,6 +31,8 @@
 		<module>snomed-test-data-us-20240301</module>
 		<module>snomed-test-data-us-20240901</module>
 		<module>snomed-test-data-us-20250301</module>
+		<!-- Only need the latest full release-->
+		<module>snomed-test-data-intl-full</module>
 	</modules>
 
 	<properties>
