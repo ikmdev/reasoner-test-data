@@ -28,6 +28,10 @@ The snomed-test-data module packages data in the SNOMED release format with the 
 To package a different SNOMED release, create a new sub-module similar to an existing one and change the edition property:
 * `<snomed.edition>SnomedCT_InternationalRF2_PRODUCTION_20190731T120000Z</snomed.edition>`
 
+To package a full release, set the `snomed.path property` as follows:
+* `<snomed.path>${snomed.edition}/Full/Terminology</snomed.path>`
+
+
 These artifacts are used for integration testing in the [IKM Elk Reasoner project](https://github.com/ikmdev/ikm-reasoner)
 
 ### Tinkar Test Data
