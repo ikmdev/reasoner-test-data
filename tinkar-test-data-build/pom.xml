@@ -27,7 +27,7 @@
 		<snomed-ct-starterdata-maven-plugin.version>1.0.0-SNAPSHOT</snomed-ct-starterdata-maven-plugin.version>
 		<snomed-ct-transformation-maven-plugin.version>1.0.0-SNAPSHOT</snomed-ct-transformation-maven-plugin.version>
 		<tinkar-data-maven-plugin.version>1.9.0</tinkar-data-maven-plugin.version>
-		<tinkar-maven-plugin.version>1.18.0</tinkar-maven-plugin.version>
+		<tinkar-maven-plugin.version>1.20.0</tinkar-maven-plugin.version>
 	</properties>
 
 	<build>
