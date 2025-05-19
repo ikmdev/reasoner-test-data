@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>dev.ikm.reasoner-test-data</groupId>
 		<artifactId>tinkar-test-data-build</artifactId>
-		<version>0.0.1-AR-483_updates-SNAPSHOT</version>
+		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
 	<artifactId>tinkar-test-data-build-snomed-us-20240901</artifactId>
