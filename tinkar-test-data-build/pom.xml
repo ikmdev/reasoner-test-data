@@ -26,8 +26,11 @@
 		<origin.namespace>3094dbd1-60cf-44a6-92e3-0bb32ca4d3de</origin.namespace>
 		<snomed-ct-starterdata-maven-plugin.version>1.0.0-SNAPSHOT</snomed-ct-starterdata-maven-plugin.version>
 		<snomed-ct-transformation-maven-plugin.version>1.0.0-SNAPSHOT</snomed-ct-transformation-maven-plugin.version>
-		<tinkar-data-maven-plugin.version>1.9.0</tinkar-data-maven-plugin.version>
-		<tinkar-maven-plugin.version>1.18.0</tinkar-maven-plugin.version>
+		<tinkar-maven-plugin.version>1.22.0-SNAPSHOT</tinkar-maven-plugin.version>
+		<tinkar-starter-data.groupId>dev.ikm.data.tinkar</tinkar-starter-data.groupId>
+		<tinkar-starter-data.artifactId>tinkar-starter-data</tinkar-starter-data.artifactId>
+		<tinkar-starter-data.classifier>unreasoned-sa</tinkar-starter-data.classifier>
+		<tinkar-starter-data.version>1.2.0</tinkar-starter-data.version>
 	</properties>
 
 	<build>
@@ -41,22 +44,52 @@
 					</configuration>
 				</plugin>
 				<plugin>
-					<groupId>dev.ikm.tinkar</groupId>
-					<artifactId>tinkar-data-maven-plugin</artifactId>
-					<!--<version>${tinkar-starter-data.version}</version>-->
-					<version>${tinkar-data-maven-plugin.version}</version>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-dependency-plugin</artifactId>
 					<executions>
 						<execution>
-							<id>load-data</id>
-							<phase>compile</phase>
+							<id>copy-tinkar-starter-data-dependency</id>
+							<phase>generate-sources</phase>
 							<goals>
-								<goal>generate-data</goal>
+								<goal>unpack</goal>
 							</goals>
 							<configuration>
-								<dataStore>
-									${project.build.directory}/db/snomed-sa</dataStore>
-								<exportFile>
-									${project.build.directory}/tinkar-export-starter-data-pb.zip</exportFile>
+								<artifactItems>
+									<artifactItem>
+										<groupId>
+											${tinkar-starter-data.groupId}</groupId>
+										<artifactId>
+											${tinkar-starter-data.artifactId}</artifactId>
+										<version>
+											${tinkar-starter-data.version}</version>
+										<classifier>
+											${tinkar-starter-data.classifier}</classifier>
+										<type>zip</type>
+										<overWrite>true</overWrite>
+										<outputDirectory>
+											${project.build.directory}</outputDirectory>
+									</artifactItem>
+								</artifactItems>
+							</configuration>
+						</execution>
+					</executions>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-antrun-plugin</artifactId>
+					<executions>
+						<execution>
+							<id>rename-file</id>
+							<phase>generate-sources</phase>
+							<goals>
+								<goal>run</goal>
+							</goals>
+							<configuration>
+								<target>
+									<move
+										file="${project.build.directory}/${tinkar-starter-data.artifactId}-${tinkar-starter-data.version}-${tinkar-starter-data.classifier}"
+										tofile="${project.build.directory}/db/snomed-sa" />
+								</target>
 							</configuration>
 						</execution>
 					</executions>

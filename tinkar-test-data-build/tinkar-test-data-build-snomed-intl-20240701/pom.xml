@@ -9,7 +9,7 @@
 	</parent>
 
 	<artifactId>tinkar-test-data-build-snomed-intl-20240701</artifactId>
-	<version>2025.03.28</version>
+	<version>2025.06.02</version>
 	<packaging>pom</packaging>
 
 	<properties>
@@ -23,8 +23,12 @@
 			<build>
 				<plugins>
 					<plugin>
-						<groupId>dev.ikm.tinkar</groupId>
-						<artifactId>tinkar-data-maven-plugin</artifactId>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-dependency-plugin</artifactId>
+					</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-antrun-plugin</artifactId>
 					</plugin>
 					<plugin>
 						<groupId>dev.ikm.maven</groupId>
