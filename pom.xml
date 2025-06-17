@@ -5,13 +5,13 @@
 	<parent>
 		<groupId>dev.ikm.build</groupId>
 		<artifactId>java-parent</artifactId>
-		<version>1.58.0</version>
+		<version>1.61.0</version>
 		<relativePath />
 	</parent>
 
 	<groupId>dev.ikm.reasoner-test-data</groupId>
 	<artifactId>reasoner-test-data-parent</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1-AR-483-Deps-Update-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<name>Reasoner Test Data Artifacts</name>
@@ -49,7 +49,7 @@
 				<plugin>
 					<groupId>org.codehaus.mojo</groupId>
 					<artifactId>tidy-maven-plugin</artifactId>
-					<version>1.2.0</version>
+					<version>1.4.0</version>
 				</plugin>
 			</plugins>
 		</pluginManagement>
