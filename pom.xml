@@ -11,7 +11,7 @@
 
 	<groupId>dev.ikm.reasoner-test-data</groupId>
 	<artifactId>reasoner-test-data-parent</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1-AR-483-Deps-Update-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<name>Reasoner Test Data Artifacts</name>
