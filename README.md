@@ -4,9 +4,9 @@ Builds maven test data artifacts for SNOMED and other data sources that are not 
 
 ## Building and Running
 
-Requires Java 24.
-Requires Maven 3.9.11
-Requires Git
+* Requires Java 24.
+* Requires Maven 3.9.11
+* Requires Git
 
 To build on Unix/Linux/OSX: `./mvnw clean install`
 
