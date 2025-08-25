@@ -47,13 +47,46 @@
 					</configuration>
 				</plugin>
 				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-enforcer-plugin</artifactId>
+					<version>3.6.1</version>
+				</plugin>
+				<plugin>
 					<groupId>org.codehaus.mojo</groupId>
 					<artifactId>tidy-maven-plugin</artifactId>
-					<version>1.2.0</version>
+					<version>1.4.0</version>
+				</plugin>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>versions-maven-plugin</artifactId>
+					<version>2.18.0</version>
 				</plugin>
 			</plugins>
 		</pluginManagement>
 		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-enforcer-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>enforce-maven</id>
+						<goals>
+							<goal>enforce</goal>
+						</goals>
+						<configuration>
+							<rules>
+								<requireMavenVersion>
+									<version>3.9</version>
+								</requireMavenVersion>
+								<requireJavaVersion>
+									<version>${java.version}</version>
+								</requireJavaVersion>
+							</rules>
+							<fail>true</fail>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>tidy-maven-plugin</artifactId>
@@ -64,6 +97,42 @@
 						<goals>
 							<goal>check</goal>
 						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>versions-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>analyze</id>
+						<phase>validate</phase>
+						<goals>
+							<goal>display-dependency-updates</goal>
+							<goal>display-plugin-updates</goal>
+						</goals>
+						<configuration>
+							<ruleSet>
+								<ignoreVersions>
+									<ignoreVersion>
+										<type>regex</type>
+										<version>.+-(alpha|beta).+</version>
+									</ignoreVersion>
+									<ignoreVersion>
+										<type>regex</type>
+										<version>.+-(M|m).+</version>
+									</ignoreVersion>
+									<ignoreVersion>
+										<type>regex</type>
+										<version>.+-(RC|rc).+</version>
+									</ignoreVersion>
+									<ignoreVersion>
+										<type>regex</type>
+										<version>(.+-SNAPSHOT|.+-M\d)</version>
+									</ignoreVersion>
+								</ignoreVersions>
+							</ruleSet>
+						</configuration>
 					</execution>
 				</executions>
 			</plugin>
