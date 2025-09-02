@@ -33,6 +33,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<skipTestDataBuild>true</skipTestDataBuild>
+		<junit.version>5.13.4</junit.version><!-- defined in parent -->
 	</properties>
 
 	<build>
